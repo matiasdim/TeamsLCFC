@@ -1,11 +1,22 @@
 class IndexController < ApplicationController
-  def index
-  end
 
-  def mix_teams
-  
-  end
-  def about
+	helper_method :players_array
+	
+	#GET
+	def index
 
-  end
+ 	end
+
+	#GET | POST
+ 	def mix_teams
+		if params[:playerNames]
+			@team_a, @team_b = params[:playerNames].each_slice( (params[:playerNames].size/2.0).round ).to_a
+		end	 	
+	end
+
+	#GET
+  	def about
+
+	end
+
 end

@@ -7,11 +7,17 @@ class IndexController < ApplicationController
 
  	end
 
-	#GET | POST
+	#GET
  	def mix_teams
+	binding.pry
+	end
+
+	#GET
+	def show_teams
 		if params[:playerNames]
 			@team_a, @team_b = params[:playerNames].each_slice( (params[:playerNames].size/2.0).round ).to_a
-		end	 	
+			binding.pry
+		end	 
 	end
 
 	#GET

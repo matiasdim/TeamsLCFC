@@ -24,7 +24,7 @@ function add_players(){
 function mix_players(){
 	var playerNames = getPLayersNames();
 	$.ajax({ 	type: 'GET', 
-  				url: '/index/mix_teams', 
+  				url: '/index/show_teams', 
   				data: { 'playerNames': playerNames}, 
 			  	success: function(data){
 				    //data is whatever you RETURN from your controller. 

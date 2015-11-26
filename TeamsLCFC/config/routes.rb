@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'index/index'
   get 'index/mix_teams'
-  post 'index/mix_teams'
+  get 'index/show_teams'
   get 'index/about'
 
   # The priority is based upon order of creation: first created -> highest priority.

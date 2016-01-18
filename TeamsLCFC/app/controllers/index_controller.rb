@@ -9,15 +9,14 @@ class IndexController < ApplicationController
 
 	#GET
  	def mix_teams
-	binding.pry
 	end
 
 	#GET
 	def show_teams
-		if params[:playerNames]
-			@team_a, @team_b = params[:playerNames].each_slice( (params[:playerNames].size/2.0).round ).to_a
-			binding.pry
-		end	 
+		if  params[:filter]
+			@team_a, @team_b = params[:filter].values.shuffle.each_slice( (params[:filter].values.size/2.0).round ).to_a
+		end
+		@team_selected = rand(0..1) #peto
 	end
 
 	#GET

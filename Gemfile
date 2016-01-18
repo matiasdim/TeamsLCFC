@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-group :development, :test do # <<<< :development, not devlopment
-  gem 'sqlite3'
-end
+
+gem 'pg'
+
 gem 'bootstrap-sass', '~> 3.3.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.0.beta1'
